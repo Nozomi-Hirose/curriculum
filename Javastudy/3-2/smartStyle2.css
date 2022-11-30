@@ -1,0 +1,140 @@
+@media screen and (max-width: 767px) {
+
+    .clearfix:after {
+     content: "";
+     display: block;
+     clear: both;
+    }
+    .wrapper {
+     width: 300px;
+        height: 450px;
+     margin: 0 auto;
+    }
+    
+    .header {
+     height: 100px;
+        width: 300px;
+      background-color: #141f40;
+    }
+    
+    .side {
+     float: left;
+     width: 100px;
+     height: 250px;
+     background-color: #80bfa8; 
+    }
+    
+    .center {
+     float: right;
+     width: 200px;
+     height: 250px;
+    }
+    
+    .center-top-left {
+     float: left;
+     width: 100px;
+    }
+    
+    .center-top-left-top {
+     height: 50px;
+        width: 125px;
+        background-color: #dbd400;
+    }
+    
+    .center-top-left-bottom {
+     height: 100px;
+        width: 125px;
+        background-color: #0093b7;
+    }
+    
+    .center-top-right {
+     width: 75px;
+     height: 150px;
+     background-color: #ff9e6b;
+        float: right;
+    }
+    
+    .center-bottom {
+     height: 100px;
+        width: 200px;
+     background-color: #8c2727;
+        float: left;
+    } 
+    
+    .footer {
+     height: 100px;
+        width: 300px;
+     background-color: #d98d30;
+    }
+    
+    }
+    
+    @media screen and (max-width: 479px) {
+    
+    
+        /*.clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }*/
+        .wrapper {
+            width: 150px;
+            height: auto;
+        }
+        
+        .header {
+            height: 50px;
+            width: 150px;
+            background-color: #141f40;
+        }
+        
+        .side {
+            float: none;
+            width: 150px;
+            height: 50px;
+            background-color: #80bfa8; 
+        }
+        
+        .center {
+            float: none;
+            height: 50px;
+            width: 150px;
+        }
+        
+        /*.center-top-left {
+            float: none;
+            width: 150px;
+        }*/
+        
+        .center-top-left-top {
+            width: 150px;
+            height: 50px;
+            background-color: #dbd400;
+        }
+        
+        .center-top-left-bottom {
+            height: 50px;
+            width: 150px;
+            background-color: #0093b7;
+        }
+        
+        .center-top-right {
+            width: 150px;
+            height: 50px;
+            background-color: #ff9e6b;
+            float: none;
+        }
+        
+        .center-bottom {
+            width: 150px;
+            height: 100px;
+            background-color: #8c2727;
+        } 
+        
+        .footer {
+            width: 150px;
+            height: 50px;
+            background-color: #d98d30;
+        }
+        
+        }

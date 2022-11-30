@@ -1,0 +1,88 @@
+
+/*ウィンドウ幅が最大479pxまでの場合に適用*/
+@media  screen and (max-width: 479px) {
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .wrapper {
+        width: 200px;
+        margin: 0 auto;
+    }
+    .header {
+        width: 200px;
+        height: 200px;
+        background: #141f40;
+
+    }
+    .shiroibox{
+        width: 60px;
+        height: 160px;
+        background: white;
+        top : 20px;
+        right : 70px;
+        bottom : 20px;
+
+    }
+    .akaibox1{
+        width: 40px;
+        height: 40px;
+        background: #a9004b;
+   
+        margin: 10px 0 0 10px;
+    }
+    .akaibox2{
+        width: 40px;
+        height: 40px;
+        background: #a9004b;
+       
+        margin: 10px 0 0 10px;
+    }
+    .akaibox3{
+        width: 40px;
+        height: 40px;
+        background: #a9004b;
+       
+        margin: 10px 0 0 10px;
+    }
+    .left {
+        width: 200px;
+        height: 130px;
+        background: #80bfa8;
+       
+    }
+    .right {
+        width: 200px;
+        height: 200px;
+        background: #8c2727;
+        
+    }
+    .mikanbox1{
+        width: 130px;
+        height: 40px;
+        background: #ff863f;
+        margin: 20px 0 0 30px;
+        border: 5px solid white;
+    
+    }
+    .mikanbox2{
+        width: 130px;
+        height: 40px;
+        background: #ff863f;
+        margin: 10px 0 0 30px;
+        border: 5px solid white;
+    }
+    .mikanbox3{
+        width: 130px;
+        height: 40px;
+        background:#ff863f;
+        margin: 10px 0 0 30px;
+        border: 5px solid white;
+    }
+    .footer {
+        width: 100%;
+        height: 100px;
+        background: #d98d30;
+    }
+}

@@ -1,0 +1,38 @@
+
+/*ウィンドウ幅が最大767pxまでの場合に適用*/
+@media  screen and (max-width: 767px) {
+    .header {
+        width: 250px;
+    }
+
+    .rightbox{
+        width: 100px;
+    }
+
+    .footer {
+        width: 250px;
+    }
+}
+
+/*ウィンドウ幅が最大479pxまでの場合に適用*/
+@media  screen and (max-width: 767px) {
+    .header {
+        width: 150px;
+    }
+
+    .rightbox{
+        width: 150px;
+    }
+
+    .footer {
+        width: 150px;
+    }
+}
+
+.leftbox {
+    float: none; /* 要素の浮動化の解除 */
+    }
+
+.rightbox {
+    float: none; /* 要素の浮動化の解除 */
+    }

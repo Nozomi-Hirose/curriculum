@@ -1,0 +1,64 @@
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+   }
+   .wrapper {
+    width: 400px;
+    margin: 0 auto;
+   }
+   
+   .header {
+    height: 100px;
+       width: 400px;
+    background: red;
+   }
+   
+   .side {
+    float: left;
+    width: 150px;
+    height: 250px;
+    background: blue; 
+   }
+   
+   .center {
+    float: right;
+    width: 250px;
+    height: 250px;
+   }
+   
+   .center-top-left {
+    float: left;
+    width: 150px;
+   }
+   
+   .center-top-left-top {
+    height: 50px;
+       width: 150px;
+    background: orange;
+   }
+   
+   .center-top-left-bottom {
+    height: 100px;
+       width: 150px;
+    background: green;
+   }
+   
+   .center-top-right {
+    width: 100px;
+    height: 150px;
+    background: skyblue;
+       float: right;
+   }
+   
+   .center-bottom {
+    height: 100px;
+       width: 250px;
+    background: orangered;
+   } 
+   
+   .footer {
+    height: 100px;
+       width: 400px;
+    background: yellow;
+   }

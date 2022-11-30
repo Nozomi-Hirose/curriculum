@@ -1,0 +1,84 @@
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.wrapper {
+	width: 400px;
+	margin: 0 auto;
+}
+.header {
+	width: 400px;
+	height: 100px;
+	background: #141f40;
+	position: relative;
+}
+.shiroibox{
+	width: 160px;
+	height: 60px;
+	background: white;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+}
+.akaibox1{
+	width: 40px;
+	height: 40px;
+	background: #a9004b;
+	float: left;
+	margin: 10px 0 0 10px;
+}
+.akaibox2{
+	width: 40px;
+	height: 40px;
+	background: #a9004b;
+	float: left;
+	margin: 10px 0 0 10px;
+}
+.akaibox3{
+	width: 40px;
+	height: 40px;
+	background: #a9004b;
+	float: left;
+	margin: 10px 0 0 10px;
+}
+.left {
+	width: 150px;
+	height: 250px;
+	background: #80bfa8;
+	float: left;
+}
+.right {
+	width: 250px;
+	height: 250px;
+	background: #8c2727;
+	float: right;
+}
+.mikanbox1{
+	width: 140px;
+	height: 40px;
+	background: #ff863f;
+	margin: 40px 60px 0 40px;
+	border: 5px solid white;
+
+}
+.mikanbox2{
+	width: 140px;
+	height: 40px;
+	background: #ff863f;
+	margin: 10px 60px 0 40px;
+	border: 5px solid white;
+}
+.mikanbox3{
+	width: 140px;
+	height: 40px;
+	background:#ff863f;
+	margin: 10px 60px 40px 40px;
+	border: 5px solid white;
+}
+.footer {
+	width: 100%;
+	height: 100px;
+	background: #d98d30;
+}
