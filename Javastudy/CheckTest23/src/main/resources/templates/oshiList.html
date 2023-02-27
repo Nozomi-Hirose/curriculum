@@ -9,6 +9,7 @@
         <tr th:each="oshi : ${oshiList}" th:object="${oshi}">
             <td th:text="*{id}"></td>
             <td th:text="*{title}"></td>
+           <td th:text="*{impressions}"></td><!--★消すならここ-->
             <td th:text="*{price}"></td>
         </tr>
     </table>
