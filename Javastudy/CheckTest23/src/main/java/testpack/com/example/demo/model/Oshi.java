@@ -24,9 +24,9 @@ public class Oshi {
     // 本のタイトルを保持するフィールド
     private String title;
 	
-    @Column(name="impressions")//★消すならここ
-    // 本のタイトルを保持するフィールド
-    private String impressions;
+//    @Column(name="impressions")//★消すならここ
+//    // 本のタイトルを保持するフィールド
+//    private String impressions;
 	
     @Column(name="price")
     // 本の値段を保持するフィールド
