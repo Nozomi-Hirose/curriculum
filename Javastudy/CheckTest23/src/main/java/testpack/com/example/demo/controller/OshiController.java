@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +21,6 @@ public class OshiController {
 
 	@Autowired
 	OshiService service;
-	private Oshi oshiForm;
 
 	@GetMapping("/oshi-list")
 	public String oshiList(Model model) {
@@ -38,7 +39,7 @@ public class OshiController {
 	 * @return 新規登録画面
 	 */
 	@GetMapping("/oshi-create")
-	public String createoshi(Model model) {
+	public String createOshi(Model model) {
 
 		model.addAttribute("oshiForm", new OshiForm());
 
@@ -52,12 +53,19 @@ public class OshiController {
 	 * @return
 	 */
 	@PostMapping("/oshi-create")
-	public String saveOshi(@ModelAttribute OshiForm oshiForm, Model model) {
+	public String saveOshi(@ModelAttribute @Validated OshiForm oshiForm,  BindingResult result,Model model) {
 
+		// バリデーションエラーの場合
+		if(result.hasErrors()) {
+			// 新規登録画面に遷移
+			return "oshiadd";
+		}
 		// 本を登録する
 		service.insert(oshiForm);
 
 		// 本の一覧表示画面にリダイレクト
 		return "redirect:/oshi-list";
 	}
+	
 }
+
