@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>本を新規登録する</title>
+<title>キャラクター記録</title>
 <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.2/css/bootstrap.min.css}"/>
 </head>
 <body>
     <div th:replace="share::header"></div>
     <div class="container">
-        <h1>新規登録する</h1>
+        <h1>ライブ記録</h1>
         <form th:action="@{/oshi-create}" th:object="${oshiForm}" method="POST">
             <div class="mb-3">
                 <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger">Title Error</p>
