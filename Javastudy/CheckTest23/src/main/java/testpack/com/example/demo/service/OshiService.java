@@ -8,8 +8,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import testpack.com.example.demo.form.BookForm;
 import testpack.com.example.demo.form.EditBookForm;
+import testpack.com.example.demo.form.EditOshiForm;
+import testpack.com.example.demo.form.OshiForm;
 import testpack.com.example.demo.model.Book;
+import testpack.com.example.demo.model.Oshi;
 import testpack.com.example.demo.repository.BookRepository;
+import testpack.com.example.demo.repository.OshiRepository;
 
 
 @Service
@@ -17,13 +21,13 @@ import testpack.com.example.demo.repository.BookRepository;
 public class OshiService {
 	
     @Autowired
-    BookRepository repository;
+    OshiRepository repository;
 	
     /**
      * データベースから本の一覧を取得する
      * @return
      */
-    public List<Book> findAll() {
+    public List<Oshi> findAll() {
         return repository.findAll();
     }
 	
@@ -31,12 +35,12 @@ public class OshiService {
      * データベースにデータを登録する
      * @return
      */
-    public void insert(BookForm bookForm) {
+    public void insert(OshiForm oshiForm) {
         // データベースに登録する値を保持するインスタンス
-        Book book = new Book();
+        Oshi book = new Oshi();
         // 画面から受け取った値をデータベースに保存するインスタンスに渡す
-        book.setTitle(bookForm.getTitle());
-        book.setPrice(bookForm.getPrice());
+        book.setTitle(oshiForm.getTitle());
+        book.setPrice(oshiForm.getPrice());
         // データベースに登録する
         repository.save(book);
     }
@@ -46,36 +50,36 @@ public class OshiService {
      * @param id
      * @return
      */
-    public EditBookForm getOneBook(Integer id) {
+    public EditOshiForm getOneBook(Integer id) {
 
         // idを指定して本の情報を取得する
-        Book book = repository.findById(id).orElseThrow();
+        Oshi oshi = repository.findById(id).orElseThrow();
 
         // 画面返却用のFormに値を設定する
-        EditBookForm editBook = new EditBookForm();
-        editBook.setId(book.getId());
-        editBook.setTitle(book.getTitle());
-        editBook.setPrice(book.getPrice());
+        EditOshiForm editOshi = new EditOshiForm();
+        editOshi.setId(oshi.getId());
+        editOshi.setTitle(oshi.getTitle());
+        editOshi.setPrice(oshi.getPrice());
 
-        return editBook;
+        return editOshi;
     }
     
     /**
      * 本の情報を更新する
      * @param editBook
      */
-    public void update(EditBookForm editBook) {
+    public void update(EditOshiForm editOshi) {
 
         // データベースに登録する値を保持するインスタンスの作成
-        Book book = new Book();
+        Oshi oshi = new Oshi();
 
         // 画面から受け取った値を設定する
-        book.setId(editBook.getId());
-        book.setTitle(editBook.getTitle());
-        book.setPrice(editBook.getPrice());
+        oshi.setId(editOshi.getId());
+        oshi.setTitle(editOshi.getTitle());
+        oshi.setPrice(editOshi.getPrice());
 
         // データベースを更新する
-        repository.save(book);
+        repository.save(oshi);
     }
     
     /**
